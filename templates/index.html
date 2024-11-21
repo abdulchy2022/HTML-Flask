@@ -1,0 +1,40 @@
+
+<html>
+    <body>
+        <div class="container">
+
+
+          <div class="mt-5" >
+            <h2>Product Price  </h2>
+
+          </div>
+          
+          <div class="row g-4 g-lg-0">
+            {% for product_id, product in products.items() %}
+                <div id="product-list"  class="col-lg-4 mt-5" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="pricing-item">
+                        <h3>{{ product.name }}</h3>
+                        <div class="text-center"> 
+                        <h4>£{{ product.price }}</h4>
+
+                        </div>
+                        <div class="pricing-item mt-5">
+                          <ul>
+                            {% for feature in product.features %}
+                            <li> <span> {{feature}} </span></li>
+                          {% endfor %}
+                          </ul>
+                      </div>        
+                            
+                      </div>
+                
+                </div>
+            {% endfor %}
+          </div>
+
+
+
+        </div>
+    </body>
+</html>
+
